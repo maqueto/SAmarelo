@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setembro Amarelo — Você não precisa passar por tudo sozinho</title>
+<meta name="description" content="Um espaço acolhedor sobre o Setembro Amarelo: informação, escuta e apoio para valorizar a vida.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fundo de partículas / luzes suaves, presente em toda a página -->
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<!-- Link de acessibilidade: pular para conteúdo -->
+<a class="skip-link" href="#inicio">Pular para o conteúdo principal</a>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="site-header" id="topo">
+  <div class="header-inner">
+    <a href="#inicio" class="logo">
+      <span class="logo-dot" aria-hidden="true"></span>
+      Setembro <strong>Amarelo</strong>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre">A campanha</a></li>
+        <li><a href="#ajudar">Como ajudar</a></li>
+        <li><a href="#quando-ajuda">Buscar ajuda</a></li>
+        <li><a href="#universo">Mensagem ao universo</a></li>
+        <li><a href="#mitos">Mitos e verdades</a></li>
+      </ul>
+      <a href="#nao-sozinho" class="btn btn-primary nav-cta">Quero buscar ajuda</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-label="Abertura">
+    <div class="hero-inner">
+      <p class="eyebrow reveal">🎗️ Setembro Amarelo · Valorização da Vida</p>
+      <h1 class="reveal">Você não precisa passar por tudo <span class="highlight">sozinho</span>.</h1>
+      <p class="hero-subtitle reveal">Setembro Amarelo é um convite para falar, ouvir, acolher e valorizar a vida.</p>
+      <div class="hero-actions reveal">
+        <a href="#sobre" class="btn btn-primary">Conheça a campanha</a>
+        <a href="#universo" class="btn btn-ghost">Escreva o que estou sentindo</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+      <p>role para descobrir</p>
+    </div>
+  </section>
+
+  <!-- ===================== O QUE É ===================== -->
+  <section class="section" id="sobre">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Entenda a causa</p>
+      <h2 class="reveal">O que é o Setembro Amarelo?</h2>
+      <p class="section-lead reveal">
+        Uma campanha mundial de prevenção ao suicídio e valorização da vida, dedicada a lembrar que
+        cuidar da saúde emocional é tão importante quanto cuidar do corpo — e que ninguém precisa
+        enfrentar momentos difíceis em silêncio.
+      </p>
+
+      <div class="card-grid" id="sobreCards">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">🌻</span>
+          <h3>Como surgiu</h3>
+          <p>O movimento nasceu em homenagem a um jovem chamado Mike Emme e se espalhou pelo mundo como
+             um símbolo de esperança, incentivando comunidades inteiras a falar abertamente sobre saúde mental.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">🎯</span>
+          <h3>Qual é o objetivo</h3>
+          <p>Sensibilizar a sociedade sobre a importância da prevenção, informar sobre sinais de alerta
+             e mostrar que existe apoio disponível para quem precisa.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">🗣️</span>
+          <h3>Por que falar importa</h3>
+          <p>Falar sobre saúde mental não cria o problema — ele já existe. Falar é o que abre espaço
+             para o cuidado, o acolhimento e a ajuda chegarem até quem precisa.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">💛</span>
+          <h3>Combater o preconceito</h3>
+          <p>O sofrimento emocional ainda carrega estigma. Reduzir esse preconceito é essencial para que
+             mais pessoas se sintam seguras para pedir ajuda sem medo de julgamento.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">👂</span>
+          <h3>Ouvir sem julgar</h3>
+          <p>Muitas vezes, a pessoa não precisa de respostas prontas — precisa de alguém disposto a
+             escutar de verdade, com paciência e sem pressa para "resolver" o que ela sente.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">🤝</span>
+          <h3>Pedir ajuda não é fraqueza</h3>
+          <p>Reconhecer que se está passando por um momento difícil e buscar apoio é um gesto de
+             coragem e de cuidado consigo mesmo, não o contrário.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO POSSO AJUDAR ===================== -->
+  <section class="section section-alt" id="ajudar">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Na prática</p>
+      <h2 class="reveal">Como posso ajudar alguém?</h2>
+      <p class="section-lead reveal">
+        Pequenas atitudes podem fazer uma diferença enorme para quem está passando por um momento difícil.
+        Toque em cada card para saber mais.
+      </p>
+
+      <div class="card-grid interactive-grid" id="ajudarCards">
+        <!-- gerado também via JS, mas mantido no HTML para acessibilidade/leitura sem JS -->
+        <button class="card flip-card reveal" data-detail="Perguntar não é invadir. Muitas vezes, a pessoa só está esperando alguém abrir espaço para o assunto.">
+          <span class="card-icon" aria-hidden="true">👂</span>
+          <h3>Ouça sem julgar</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+
+        <button class="card flip-card reveal" data-detail="Um gesto simples, uma mensagem ou apenas sentar ao lado já mostra que a pessoa não está sozinha.">
+          <span class="card-icon" aria-hidden="true">💛</span>
+          <h3>Demonstre que você se importa</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+
+        <button class="card flip-card reveal" data-detail="Uma pergunta simples e sincera pode abrir a porta para uma conversa importante." >
+          <span class="card-icon" aria-hidden="true">💬</span>
+          <h3>Pergunte como a pessoa está</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+
+        <button class="card flip-card reveal" data-detail="Buscar apoio profissional ou de alguém de confiança é um passo importante — e você pode incentivar isso com carinho.">
+          <span class="card-icon" aria-hidden="true">🌱</span>
+          <h3>Incentive a busca por ajuda</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+
+        <button class="card flip-card reveal" data-detail="Frases como 'não é nada' ou 'você está exagerando' podem afastar quem mais precisa ser ouvido." >
+          <span class="card-icon" aria-hidden="true">🕊️</span>
+          <h3>Não minimize o sofrimento</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+
+        <button class="card flip-card reveal" data-detail="Em situações mais delicadas, envolver um adulto responsável ou um profissional de saúde é essencial e correto.">
+          <span class="card-icon" aria-hidden="true">🧭</span>
+          <h3>Procure um responsável ou profissional</h3>
+          <p class="card-hint">toque para saber mais</p>
+        </button>
+      </div>
+
+      <p class="highlight-message reveal">
+        “Às vezes, estar presente e ouvir pode fazer uma grande diferença.”
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== QUANDO PROCURAR AJUDA ===================== -->
+  <section class="section" id="quando-ajuda">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Não espere</p>
+      <h2 class="reveal">Quando procurar ajuda?</h2>
+      <p class="section-lead reveal">
+        Qualquer pessoa pode passar por momentos emocionalmente difíceis — e não é preciso esperar a
+        situação se tornar insuportável para buscar apoio. Cuidar da mente também é prevenção.
+      </p>
+
+      <div class="support-grid reveal">
+        <div class="support-item"><span aria-hidden="true">👪</span><p>Família</p></div>
+        <div class="support-item"><span aria-hidden="true">🧑‍🤝‍🧑</span><p>Amigos</p></div>
+        <div class="support-item"><span aria-hidden="true">🏫</span><p>Professores</p></div>
+        <div class="support-item"><span aria-hidden="true">🛡️</span><p>Responsáveis</p></div>
+        <div class="support-item"><span aria-hidden="true">🧠</span><p>Psicólogos</p></div>
+        <div class="support-item"><span aria-hidden="true">🩺</span><p>Médicos</p></div>
+        <div class="support-item"><span aria-hidden="true">🏥</span><p>Serviços de saúde</p></div>
+        <div class="support-item"><span aria-hidden="true">🚨</span><p>Emergência<br><small>em perigo imediato</small></p></div>
+      </div>
+
+      <div class="cvv-banner reveal">
+        <div class="cvv-text">
+          <h3>CVV — Centro de Valorização da Vida</h3>
+          <p>Apoio emocional e prevenção do suicídio, gratuito e sigiloso, para todas as idades. Ligue, converse por chat ou envie um e-mail — a qualquer hora.</p>
+        </div>
+        <a class="cvv-number" href="tel:188" aria-label="Ligar para o CVV, número 188">
+          <span>Ligue</span>
+          <strong>188</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENSAGEM PARA O UNIVERSO ===================== -->
+  <section class="section section-universe" id="universo">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Um espaço só seu</p>
+      <h2 class="reveal">Uma mensagem para o universo ✨</h2>
+      <p class="section-lead reveal">
+        Às vezes, colocar em palavras aquilo que sentimos pode ajudar a organizar os pensamentos.
+        Escreva aqui o que você gostaria de colocar para fora.
+      </p>
+
+      <div class="universe-card reveal">
+
+        <div id="universeForm">
+          <label for="feelingSelect" class="universe-label">Como você está se sentindo?</label>
+          <div class="feelings" id="feelingsGroup" role="group" aria-label="Como você está se sentindo?">
+            <button type="button" class="feeling-chip" data-feeling="Bem">🙂 Bem</button>
+            <button type="button" class="feeling-chip" data-feeling="Confuso(a)">😐 Confuso(a)</button>
+            <button type="button" class="feeling-chip" data-feeling="Triste">😔 Triste</button>
+            <button type="button" class="feeling-chip" data-feeling="Ansioso(a)">😰 Ansioso(a)</button>
+            <button type="button" class="feeling-chip" data-feeling="Com raiva">😡 Com raiva</button>
+            <button type="button" class="feeling-chip" data-feeling="Precisando de apoio">❤️ Precisando de apoio</button>
+            <button type="button" class="feeling-chip" data-feeling="Esperançoso(a)">✨ Esperançoso(a)</button>
+            <button type="button" class="feeling-chip" data-feeling="Outro">Outro</button>
+          </div>
+
+          <label for="universeMessage" class="universe-label">Sua mensagem</label>
+          <textarea id="universeMessage" rows="5" placeholder="Escreva aqui o que você gostaria de dizer…" maxlength="600"></textarea>
+
+          <p class="privacy-note">
+            🔒 Não solicitamos nem armazenamos nome, telefone, endereço, escola ou localização.
+            Não compartilhe informações pessoais ou dados que possam identificar você.
+          </p>
+
+          <button class="btn btn-primary universe-send" id="sendMessageBtn">Enviar minha mensagem ao universo</button>
+        </div>
+
+        <div id="universeResult" class="universe-result" hidden>
+          <p class="universe-final-message">Você colocou isso em palavras. Isso já é importante. ❤️</p>
+          <p class="universe-final-sub">Você não precisa carregar tudo sozinho. Se estiver passando por um momento difícil, considere conversar com alguém de confiança.</p>
+          <button class="btn btn-ghost" id="writeAgainBtn">Escrever outra mensagem</button>
+        </div>
+
+        <p class="universe-disclaimer">
+          Esta mensagem é uma forma simbólica de expressão e reflexão — não substitui apoio profissional.
+          Nada do que você escreve aqui é salvo ou publicado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VOCÊ NÃO ESTÁ SOZINHO ===================== -->
+  <section class="section nao-sozinho" id="nao-sozinho">
+    <div class="section-inner nao-sozinho-inner">
+      <p class="eyebrow reveal">Um lembrete importante</p>
+      <h2 class="reveal">Você não está sozinho.</h2>
+      <p class="section-lead reveal">
+        Se você está passando por um momento difícil, conversar com alguém de confiança pode ser o
+        primeiro passo. Você merece cuidado e apoio.
+      </p>
+      <button class="btn btn-primary btn-large reveal" id="buscarAjudaBtn" aria-expanded="false" aria-controls="ajudaInfo">
+        Quero buscar ajuda
+      </button>
+
+      <div class="ajuda-info" id="ajudaInfo" hidden>
+        <div class="ajuda-info-card">
+          <h3>CVV — 188</h3>
+          <p>Ligação, chat e e-mail gratuitos e sigilosos, disponíveis 24 horas por dia, todos os dias.</p>
+        </div>
+        <div class="ajuda-info-card">
+          <h3>Perigo imediato</h3>
+          <p>Em uma situação de risco imediato, procure um adulto responsável, um serviço de saúde ou a
+             emergência mais próxima o quanto antes.</p>
+        </div>
+        <div class="ajuda-info-card">
+          <h3>Todos os dias</h3>
+          <p>Família, amigos, professores e profissionais de saúde também são caminhos válidos e importantes de apoio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MITOS E VERDADES ===================== -->
+  <section class="section" id="mitos">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Vamos esclarecer</p>
+      <h2 class="reveal">Mitos e verdades</h2>
+      <p class="section-lead reveal">Toque em cada pergunta para ver a explicação.</p>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item reveal">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Falar sobre saúde mental incentiva o problema?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Não. As evidências mostram o contrário: falar abertamente sobre saúde mental reduz o
+               estigma e aumenta as chances de alguém buscar ajuda a tempo. O silêncio é o que mais afasta as pessoas do apoio de que precisam.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Pedir ajuda é sinal de fraqueza?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Não. Reconhecer uma dificuldade e buscar apoio exige coragem e autoconhecimento. É um
+               cuidado consigo mesmo, assim como buscar um médico quando o corpo não está bem.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Somente pessoas com problemas graves precisam conversar?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Não. Qualquer pessoa pode procurar apoio, em qualquer intensidade de dificuldade. Não é
+               preciso esperar uma crise para conversar com alguém — cuidar da mente é para todos, sempre.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Perguntar diretamente sobre o assunto pode "plantar a ideia"?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Não. Perguntar com cuidado e sinceridade não cria o problema — pelo contrário, mostra
+               disponibilidade e pode ser um alívio enorme para quem estava sem coragem de falar primeiro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FRASES DE ACOLHIMENTO ===================== -->
+  <section class="section section-frases">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Para lembrar</p>
+      <h2 class="reveal">Frases de acolhimento</h2>
+
+      <div class="frases-track" id="frasesTrack">
+        <blockquote class="frase-card">Você merece ser ouvido.</blockquote>
+        <blockquote class="frase-card">Se estiver difícil, procure alguém para conversar.</blockquote>
+        <blockquote class="frase-card">Você não precisa enfrentar tudo sozinho.</blockquote>
+        <blockquote class="frase-card">Falar sobre o que sentimos também é uma forma de cuidar de nós mesmos.</blockquote>
+        <blockquote class="frase-card">Existe ajuda e você pode procurá-la.</blockquote>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tagline">Setembro Amarelo — Valorizar a vida também é saber pedir ajuda.</p>
+
+    <nav class="footer-links" aria-label="Links do rodapé">
+      <a href="#sobre">A campanha</a>
+      <a href="#ajudar">Como ajudar</a>
+      <a href="#quando-ajuda">Buscar ajuda</a>
+      <a href="#universo">Mensagem ao universo</a>
+      <a href="#mitos">Mitos e verdades</a>
+    </nav>
+
+    <div class="footer-cvv">
+      <span aria-hidden="true">💛</span> CVV — <a href="tel:188">188</a> · apoio emocional gratuito e sigiloso, 24h
+    </div>
+
+    <div class="footer-credits">
+      <p>Desenvolvido por <strong>Victor Allan</strong></p>
+      <p>Em colaboração com os alunos do 2º ano do Mediotec Serra Talhada</p>
+      <p class="footer-note">Projeto educativo de conscientização e valorização da vida.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
