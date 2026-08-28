@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Administrativo — Setembro Amarelo</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-wrap">
+
+  <header class="admin-header">
+    <p class="admin-eyebrow">Setembro Amarelo</p>
+    <h1>Painel administrativo</h1>
+    <p class="admin-subtitle">Mensagens enviadas anonimamente na área "Uma mensagem para o universo".</p>
+  </header>
+
+  <!-- ===== Tela de login ===== -->
+  <section class="admin-card" id="loginBox">
+    <h2>Acesso restrito</h2>
+    <p class="admin-hint">Esta área é apenas para a equipe responsável pelo projeto.</p>
+
+    <label for="passwordInput">Senha de administrador</label>
+    <input type="password" id="passwordInput" placeholder="Digite a senha" autocomplete="current-password">
+
+    <button id="loginBtn" class="btn btn-primary">Entrar</button>
+    <p id="loginError" class="admin-error" role="alert" hidden></p>
+  </section>
+
+  <!-- ===== Painel com as mensagens ===== -->
+  <section class="admin-card" id="panel" hidden>
+
+    <div class="care-banner">
+      ⚠️ Este painel não substitui atendimento em tempo real. Se alguma mensagem indicar risco
+      imediato, isso não chegará a tempo por aqui — sempre reforce o CVV (188) e canais de
+      emergência nas comunicações da campanha.
+    </div>
+
+    <div class="panel-toolbar">
+      <p id="countLabel" class="count-label">Carregando…</p>
+      <div class="toolbar-actions">
+        <button id="refreshBtn" class="btn btn-ghost">Atualizar</button>
+        <button id="exportBtn" class="btn btn-primary">Exportar PDF</button>
+        <button id="logoutBtn" class="btn btn-ghost">Sair</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="messagesTable">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Sentimento</th>
+            <th scope="col">Mensagem</th>
+            <th scope="col"><span class="visually-hidden">Ações</span></th>
+          </tr>
+        </thead>
+        <tbody id="messagesBody"></tbody>
+      </table>
+    </div>
+
+    <p id="emptyState" class="admin-empty" hidden>Nenhuma mensagem por aqui ainda.</p>
+  </section>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
