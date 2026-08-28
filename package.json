@@ -1,0 +1,11 @@
+{
+  "name": "setembro-amarelo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site do Setembro Amarelo com painel administrativo de mensagens.",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
